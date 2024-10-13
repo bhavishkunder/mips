@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Globe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+        }
+
+        /* Tooltip Styling */
+        #tooltip {
+            position: absolute;
+            display: none;
+            background: rgba(0, 0, 0, 0.9); /* High opacity for better readability */
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+            pointer-events: none;
+            font-size: 18px; /* Font size adjustment */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            text-align: center; /* Center-align the entire tooltip content */
+            width: auto; /* Auto width based on content */
+            white-space: nowrap; /* Prevent line breaks in the tooltip */
+            max-width: 400px; /* Optional: Set a maximum width */
+        }
+
+        /* Country Name Styling in Tooltip */
+        #tooltip strong {
+            font-size: 22px; /* Larger font size for country name */
+            color: #FFD700; /* Gold color for distinction */
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Center-align project names with bullets */
+        #tooltip ul {
+            padding-left: 0; /* Remove default padding */
+            margin: 0;
+            list-style-type: none; /* Remove default bullet points */
+            font-size: 16px;
+        }
+
+        /* Custom bullet points */
+        #tooltip ul li::before {
+            content: '•'; /* Add bullet point */
+            color: #FFD700; /* Same gold color as the country name */
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em; /* Align bullet points properly */
+        }
+
+        #tooltip li {
+            white-space: nowrap; /* Ensure project names stay on one line */
+            text-align: center; /* Center-align the project names */
+        }
+
+        /* Tooltip Button */
+        .tooltip-actions {
+            margin-top: 8px;
+        }
+
+        .tooltip-actions button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Info Box Styling */
+        #info-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .counter {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .counter-label {
+            font-size: 16px;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 5px;
+            color: #a0a0a0;
+        }
+
+        .counter-value {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div id="tooltip">
+        <!-- Dynamic tooltip content -->
+    </div>
+
+    <div id="info-box">
+        <div class="counter">
+            <span class="counter-label">Turnover</span>
+            ₹<span id="turnover-counter" class="counter-value">0</span>
+        </div>
+        <div class="counter">
+            <span class="counter-label">Companies</span>
+            <span id="companies-counter" class="counter-value">0</span>
+        </div>
+    </div>
+
+    <!-- Importing Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Main script file -->
+    <script src="main.js"></script>
+</body>
+</html>
