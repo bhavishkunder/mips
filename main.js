@@ -122,12 +122,12 @@ function setupLighting() {
 // Setup location icons with interactivity
 function setupLocations() {
   const locations = [
-    { name: "Japan", lat: 35.6895, lon: 139.6917, projects: ["Maysons Systems Japan", "FASMAC"], scale: 3 },
-    { name: "USA", lat: 38.9072, lon: -77.0369, projects: ["Deloitte and Touche ", "Owens Corning"], scale: 3 },
-    { name: "United Kingdom", lat: 51.5074, lon: -0.1278, projects: ["Genesys Software Inc UK & India", "TASMAC University of South Wales UK"], scale: 3 },
-    { name: "India", lat: 20.5937, lon: 78.9629, projects: ["Honeywell", "Hughes Network Systems", "Owens Corning", "Genesys Software Inc (UK & India)","Netrack Enclosures Pvt Ltd"], scale: 1.5 },
-    { name: "Karnataka", lat: 15.3173, lon: 75.7139, projects: ["Beml Bangalore ", "Bhel Bangalore","Jindal steels","Karnataka energy regulation commission","Dept. Of cooperation gvt of Karnataka","KSRTC"], scale: 1.2 },
-    { name: "Bengaluru", lat: 12.9716, lon: 77.5946, projects: ["MSRIT", "JSS","SMVIT","BIT","BMSCE"], scale: 1 }
+    { name: "Japan", lat: 35.6895, lon: 139.6917, projects: ["1.Maysons Systems Japan", "2.FASMAC"], scale: 3 },
+    { name: "USA", lat: 38.9072, lon: -77.0369, projects: ["1.Deloitte and Touche ", "2.Owens Corning"], scale: 3 },
+    { name: "United Kingdom", lat: 51.5074, lon: -0.1278, projects: ["1.Genesys Software Inc UK & India", "2.TASMAC University of South Wales UK"], scale: 3 },
+    { name: "India", lat: 20.5937, lon: 78.9629, projects: ["1.Honeywell", "2.Hughes Network Systems", "3.Owens Corning", "4.Genesys Software Inc (UK & India)","5.Netrack Enclosures Pvt Ltd"], scale: 1.5 },
+    { name: "Karnataka", lat: 15.3173, lon: 75.7139, projects: ["1.Beml Bangalore ", "2.Bhel Bangalore","2.Jindal steels","3.Karnataka energy regulation commission","4.Dept. Of cooperation gvt of Karnataka","5.KSRTC"], scale: 1.2 },
+    { name: "Bengaluru", lat: 12.9716, lon: 77.5946, projects: ["1.MSRIT", "2.JSS","3.SMVIT","4.BIT","5.BMSCE"], scale: 1 }
   ];
 
   // Load the new icon texture
